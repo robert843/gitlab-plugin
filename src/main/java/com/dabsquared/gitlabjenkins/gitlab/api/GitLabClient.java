@@ -51,4 +51,7 @@ public interface GitLabClient {
     List<Label> getLabels(String projectId);
 
     List<Pipeline> getPipelines(String projectName);
+
+    void addRelease(Integer projectId, String name, String tag_name, String description);
+
 }

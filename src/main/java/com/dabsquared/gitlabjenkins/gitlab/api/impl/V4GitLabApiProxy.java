@@ -221,4 +221,10 @@ interface V4GitLabApiProxy extends GitLabApiProxy {
     @Path("/projects/{projectId}/pipelines")
     @Override
     List<Pipeline> getPipelines(@PathParam("projectId") String projectId);
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/projects/{projectId}/releases")
+    @Override
+    void addRelease(@PathParam("projectId") Integer projectId, @FormParam("name") String name, @FormParam("tag_name") String tag_name, @FormParam("description") String description);
 }

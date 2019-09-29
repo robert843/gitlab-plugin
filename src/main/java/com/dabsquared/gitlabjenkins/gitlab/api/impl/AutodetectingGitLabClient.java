@@ -293,6 +293,17 @@ final class AutodetectingGitLabClient implements GitLabClient {
     }
 
 
+    public void addRelease(Integer projectId, String name, String tag_name, String description) {
+        execute(
+            new GitLabOperation<Void>() {
+                @Override
+                Void execute(GitLabClient client) {
+                    client.addRelease(projectId,name,tag_name,description);
+                    return null;
+                }
+            });
+    }
+
     private GitLabClient delegate(boolean reset) {
         if (reset || delegate == null) {
             delegate = autodetectOrDie();

@@ -134,4 +134,9 @@ final class ResteasyGitLabClient implements GitLabClient {
     public List<Pipeline> getPipelines(String projectName) {
         return api.getPipelines(projectName);
     }
+
+    @Override
+    public void addRelease(Integer projectId, String name, String tag_name, String description) {
+        api.addRelease(projectId,name,tag_name,description);
+    }
 }
