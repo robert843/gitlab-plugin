@@ -561,3 +561,4 @@ See https://github.com/jenkinsci/gitlab-plugin/tree/master/src/docker/README.md
 # Release Workflow
 
 To perform a full plugin release, maintainers can run ``mvn release:prepare release:perform`` To release a snapshot, e.g. with a bug fix for users to test, just run ``mvn deploy``
+
