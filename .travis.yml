@@ -1,8 +1,10 @@
 language: java
 
+dist: trusty  
+
 jdk:
   - oraclejdk8
-  
+
 env:
   global:
     - DOCKER_CACHE_DIR=$HOME/.docker-images
